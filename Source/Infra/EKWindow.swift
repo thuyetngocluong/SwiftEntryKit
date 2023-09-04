@@ -23,6 +23,7 @@ class EKWindow: UIWindow {
         } else {
             super.init(frame: UIScreen.main.bounds)
         }
+        overrideUserInterfaceStyle = .light
         backgroundColor = .clear
         rootViewController = rootVC
         accessibilityViewIsModal = true
