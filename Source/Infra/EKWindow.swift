@@ -23,7 +23,11 @@ class EKWindow: UIWindow {
         } else {
             super.init(frame: UIScreen.main.bounds)
         }
-        overrideUserInterfaceStyle = .light
+         if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        } else {
+            // Fallback on earlier versions
+        }
         backgroundColor = .clear
         rootViewController = rootVC
         accessibilityViewIsModal = true
